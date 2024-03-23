@@ -26,6 +26,8 @@ function showWeather(response) {
               />`;
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = icon;
+
+  getForecast(response.data.city);
 }
 
 function displayTime(now) {
@@ -68,4 +70,40 @@ function handleSearch(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 
+function getForecast(city) {
+  let apiKey = "b4d4bae12atf537f223c2747of06ba2b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forecastMarkup = "";
+
+  days.forEach(function (day) {
+    forecastMarkup =
+      forecastMarkup +
+      `<div class="row">
+            <div class="column">
+              <div class="forecast-day">${day}</div>
+              <div>
+                <img
+                  src="src/Forecast-icon.jpeg"
+                  alt=""
+                  class="forecast-icon"
+                />
+              </div>
+              <div class="forecast-temp">
+                <span class="max-temp">10 &deg; </span>
+                <span class="min-temp"> 4 &deg;</span>
+              </div>
+            </div>
+          </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastMarkup;
+}
+
 searchCity("Kadoma");
+displayForecast();

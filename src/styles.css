@@ -80,9 +80,9 @@ h1 {
 .weather-forecast {
   margin-top: 30px;
   display: flex;
-  justify-content: left;
+  justify-content: space-around;
   position: relative;
-  top: 60px;
+  top: 30px;
   color: rgba(0, 0, 0, 1);
 }
 
@@ -91,7 +91,7 @@ h1 {
 }
 
 .forecast-day {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 12px;
   opacity: 0.6;
@@ -104,7 +104,7 @@ h1 {
 }
 
 .forecast-temp {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 
