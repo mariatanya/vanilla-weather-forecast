@@ -1,0 +1,108 @@
+body {
+  background-image: url("IMG_8698.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.weather-app {
+  width: fit-content;
+  margin: 50px auto 0;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
+  padding: 30px 30px 50px 30px;
+  border-radius: 25px;
+  border: none;
+  background-color: #f0eee5;
+}
+
+a {
+  color: rgba(28, 33, 65, 0.8);
+}
+
+input[type="search"] {
+  padding: 21px 35px 20px 21px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  width: 70%;
+  background-color: rgba(224, 222, 213, 0.4);
+  box-shadow: 3px 3px 10px rgba(224, 222, 213, 0.9);
+}
+
+input[type="submit"] {
+  background-image: url("Day_to_night_1.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  color: #fff;
+  padding: 22px 45px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+main {
+  padding: 50px 0;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.time,
+.sky-conditions {
+  font-size: 22px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.sky-conditions {
+  color: #5c7390;
+}
+
+.atmosphere {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.weather-info p {
+  line-height: 24px;
+  margin: 5px;
+}
+
+.temperature {
+  display: flex;
+}
+
+.temperature .value {
+  font-size: 90px;
+  margin-top: 7px;
+  line-height: 90px;
+}
+
+.temperature .icon {
+  width: 90px;
+  height: 90px;
+  margin-top: 7px;
+}
+
+.temperature .unit {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+  padding: 30px 0 0 0;
+  border-top: rgba(28, 33, 65, 0.4) solid 0.1px;
+  position: relative;
+  top: 40px;
+}

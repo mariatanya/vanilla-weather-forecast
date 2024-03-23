@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria's Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            id="search-input"
+          />
+
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+
+      <main>
+        <div class="weather-info">
+          <div>
+            <h1 id="city-name"></h1>
+            <p>
+              <span class="time" id="time"></span>
+              <span class="sky-conditions" id="condition"></span>
+              <br />
+              <span class="atmosphere">
+                Humidity: <span id="humidity"></span> | Wind:
+                <span id="wind"></span
+              ></span>
+            </p>
+          </div>
+
+          <div class="temperature">
+            <div id="icon"></div>
+            <div class="value" id="temp-value"></div>
+            <div class="unit">&deg;C</div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/mariatanya" target="_blank"
+            >Maria Kapatwa</a
+          >
+          and is
+          <a
+            href="https://github.com/mariatanya/vanilla-weather-app"
+            target="_blank"
+            >open-sourced on Github</a
+          >
+          and
+          <a href="https://jazzy-squirrel-5e5a34.netlify.app/" target="_blank"
+            >hosted on Netlify.</a
+          >
+        </p>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
