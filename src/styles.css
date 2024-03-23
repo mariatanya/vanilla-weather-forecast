@@ -93,14 +93,12 @@ h1 {
 .forecast-day {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 12px;
   opacity: 0.6;
 }
 
 .forecast-icon {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 12px;
+  width: 80px;
+  height: 80px;
 }
 
 .forecast-temp {
