@@ -56,14 +56,15 @@ h1 {
   margin: 0;
 }
 
-.time,
-.sky-conditions {
+.time {
   font-size: 22px;
   font-weight: 500;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .sky-conditions {
+  font-size: 22px;
+  font-weight: 500;
   color: #5c7390;
 }
 
@@ -92,8 +93,8 @@ h1 {
 
 .forecast-day {
   font-size: 20px;
-  font-weight: 400;
-  color: #5c7390;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .forecast-icon {
@@ -109,7 +110,7 @@ h1 {
 }
 
 .min-temp {
-  opacity: 0.8;
+  color: #5c7390;
 }
 
 .temperature {
