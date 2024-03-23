@@ -83,7 +83,7 @@ h1 {
   justify-content: space-around;
   position: relative;
   top: 30px;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .column {
@@ -92,8 +92,8 @@ h1 {
 
 .forecast-day {
   font-size: 20px;
-  font-weight: 500;
-  opacity: 0.6;
+  font-weight: 400;
+  color: #5c7390;
 }
 
 .forecast-icon {
@@ -104,10 +104,12 @@ h1 {
 .forecast-temp {
   font-size: 16px;
   font-weight: 500;
+  display: flex;
+  justify-content: space-around;
 }
 
 .min-temp {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .temperature {
