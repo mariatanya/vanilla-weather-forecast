@@ -3,7 +3,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: background 1s ease-in-out; /* Smooth transition for gradient changes */
+  transition: background 0.5s ease-in-out; /* Smooth transition for gradient changes */
   
   font-family: "Roboto", sans-serif;
 }
@@ -12,11 +12,11 @@ body {
   width: fit-content;
   height: fit-content;
   margin: 30px auto 0;
-  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   padding: 30px 30px 50px 30px;
   border-radius: 25px;
   border: none;
-  background-color: #f0eee5;
+  background-color: transparent;
 }
 
 a {
@@ -87,7 +87,10 @@ h1 {
   justify-content: space-around;
   position: relative;
   top: 30px;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 1);
+  background: linear-gradient(to right, rgba(93, 169, 233, 0.1), rgba(255, 248, 139, 0.1));
+  border-radius: 35px;
+  padding: 20px;
 }
 
 .column {
@@ -97,7 +100,7 @@ h1 {
 .forecast-day {
   font-size: 20px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 1);
 }
 
 .forecast-icon {
@@ -113,7 +116,7 @@ h1 {
 }
 
 .min-temp {
-  color: #5c7390;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .temperature {
