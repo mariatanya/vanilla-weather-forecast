@@ -1,8 +1,10 @@
 body {
-  background-image: url("IMG_8698.jpeg");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: background 1s ease-in-out; /* Smooth transition for gradient changes */
+  
   font-family: "Roboto", sans-serif;
 }
 
