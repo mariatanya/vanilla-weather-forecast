@@ -1,22 +1,39 @@
-// Array of gradient backgrounds
-const gradients = [
-  'linear-gradient(to right, #ff7f50, #fff68f)',  // Coral peach to light yellow
-  'linear-gradient(to right, #fbc2eb, #f68084)',  // Soft lavender to pink
-  'linear-gradient(to right, #5da9e9, #c2e9fb,)', // Soft blue to soft white
-  'linear-gradient(to right, #ff5f6d, #ffc371)', // Soft pink to golden orange
-  'linear-gradient(to right, #9d50bb, #ff5858)', // Deep purple to vibrant red
- 
+// Define temperature gradients
+const temperatureGradients = {
+  cold: 'linear-gradient(to right, #5da9e9, #c2e9fb)', // Soft blue to soft white for cold weather
+  cool: 'linear-gradient(to right, #84fab0, #8fd3f4)', // Mint green for cool weather
+  mild: 'linear-gradient(to right, #ff7f50, #fff68f)', // Coral peach to light yellow for mild weather
+  warm1: 'linear-gradient(to right, #fbc2eb, #f68084)', // Soft lavender to pink for 15-20 degrees
+  warm2: 'linear-gradient(to right, #ff5f6d, #ffc371)', // Soft pink to golden orange for 20-25 degrees
+  warm3: 'linear-gradient(to right, #9d50bb, #ff5858)', // Deep purple to vibrant red for 25-30 degrees
+  hot: 'linear-gradient(to right, #f12711, #f5af19)', // Sunset gradient for hot weather (over 30 degrees)
+};
 
- 
-];
+let currentCity = "";
 
-let currentCity = ""; // Store the last searched city
+// Function to change background gradient based on temperature
+function changeBackground(temperature) {
+  let gradient;
 
-// Function to change background gradient
-function changeBackground() {
-  const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
-  document.body.style.background = randomGradient;
+  // Determine which gradient to use based on temperature
+  if (temperature < 10) {
+    gradient = temperatureGradients.cold; // Cold
+  } else if (temperature >= 10 && temperature < 15) {
+    gradient = temperatureGradients.cool; // Cool
+  } else if (temperature >= 15 && temperature < 20) {
+    gradient = temperatureGradients.warm1; // Warm 1 (Soft lavender to pink)
+  } else if (temperature >= 20 && temperature < 25) {
+    gradient = temperatureGradients.warm2; // Warm 2 (Soft pink to golden orange)
+  } else if (temperature >= 25 && temperature < 30) {
+    gradient = temperatureGradients.warm3; // Warm 3 (Deep purple to vibrant red)
+  } else {
+    gradient = temperatureGradients.hot; // Hot (over 30 degrees, sunset gradient)
+  }
+
+  document.body.style.background = gradient;
 }
+
+
 
 // Function to display weather information
 function showWeather(response) {
@@ -30,7 +47,7 @@ function showWeather(response) {
   // Check if the new city is different from the current city
   if (newCity.toLowerCase() !== currentCity.toLowerCase()) {
     currentCity = newCity; // Update the current city
-    changeBackground();    // Change the background only when the city is different
+    changeBackground(temperature); // Change the background based on the new temperature
   }
 
   cityElement.innerHTML = newCity;
@@ -146,3 +163,4 @@ function displayForecast(response) {
 
 // Initial city search when the page loads
 searchCity("Kadoma");
+
