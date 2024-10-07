@@ -16,7 +16,7 @@ body {
   padding: 30px 30px 50px 30px;
   border-radius: 25px;
   border: none;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 a {

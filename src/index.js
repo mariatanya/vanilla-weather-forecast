@@ -5,8 +5,15 @@ const temperatureGradients = {
   mild: 'linear-gradient(to right, #ff7f50, #fff68f)', // Coral peach to light yellow for mild weather
   warm1: 'linear-gradient(to right, #fbc2eb, #f68084)', // Soft lavender to pink for 15-20 degrees
   warm2: 'linear-gradient(to right, #ff5f6d, #ffc371)', // Soft pink to golden orange for 20-25 degrees
-  warm3: 'linear-gradient(to right, #9d50bb, #ff5858)', // Deep purple to vibrant red for 25-30 degrees
-  hot: 'linear-gradient(to right, #f12711, #f5af19)', // Sunset gradient for hot weather (over 30 degrees)
+  warm3: 'linear-gradient(to right, #a75c66, #ff7070)', // Softer maroon to vibrant red for 25-30 degrees
+  hot: 'linear-gradient(to right, #c65d0a, #f8c471)', // Softer sunset gradient for hot weather (over 30 degrees)
+
+
+
+
+
+ 
+
 };
 
 let currentCity = "";
