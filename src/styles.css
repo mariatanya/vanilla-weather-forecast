@@ -149,3 +149,77 @@ footer p {
   position: relative;
   top: 40px;
 }
+
+@media (max-width: 768px) {
+  .weather-app {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  input[type="search"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 18px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .weather-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .temperature {
+    justify-content: center;
+    right: 0;
+    margin-top: 15px;
+  }
+
+  .weather-forecast {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .time,
+  .sky-conditions,
+  .atmosphere {
+    font-size: 18px;
+  }
+
+  .temperature .value {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .temperature .unit {
+    font-size: 20px;
+  }
+
+  .forecast-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .forecast-day {
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 14px;
+    padding: 15px 10px 0;
+  }
+}
